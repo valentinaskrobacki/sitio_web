@@ -1,0 +1,93 @@
+
+.titulo{
+    font-size: 50px;
+    text-align: center;
+    
+}
+.teams_containner{
+    width: 1000px;
+    min-height: 600px;
+    background-color: #F29F05;
+    margin: auto;
+   
+}
+
+.teams_data{
+    background-color: #23232D;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+
+.teams{
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    background-color: #23232D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+.team_logo{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.team_info{
+    margin: 20px;
+    
+}
+
+.boton_info{
+    width: 50px;
+    height: 20px;
+}
+
+.name_and_logo{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    
+}
+
+.team_name{
+    font-size: 25px;
+    padding-left: 50px;
+    
+}
+
+.info_team_container{
+    display: flex;
+
+}
+
+.torneo_data{
+  
+    width: 50%;
+    padding-left: 50px;
+    font-size: 25px;
+    color: #f5f5f5;
+}
+.partidos_data{
+   
+    width: 50%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.info_and_logo{
+    display: flex;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    padding-left: 20px;
+}
+
+p{
+    color: #f5f5f5;
+}
