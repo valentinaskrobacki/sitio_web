@@ -1,93 +1,106 @@
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .titulo{
-    font-size: 50px;
+    width: 100%;
+    font-size: 4rem;
     text-align: center;
-    
+    margin: 32px 0px;
 }
 .teams_containner{
-    width: 1000px;
-    min-height: 600px;
-    background-color: #F29F05;
-    margin: auto;
-   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
-
-.teams_data{
-    background-color: #23232D;
+.content{
     width: 90%;
-    margin: auto;
-    margin-bottom: 20px;
 }
-
-
 .teams{
-    width: 80%;
-    height: 100px;
+    padding: 8px;
+    width: 100%;
+    height: 80px;
     margin: auto;
     background-color: #23232D;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
-    
+    border-bottom: 0.5px solid white;
+}
+
+.teams_data-on{
+    background-color: #23232D;
+    width: 100%;
+    margin-bottom: 8px;
+    height: 170px;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+}
+.teams_data-off{
+    background-color: #23232D;
+    width: 100%;
+    margin-bottom: 8px;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
 }
 .team_logo{
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    width: 52px;
 }
 .team_info{
-    margin: 20px;
-    
+    width: 20%;
+    text-align: start;
 }
 
 .boton_info{
-    width: 50px;
-    height: 20px;
+    width: 70px;
+    height: 30px;
+    margin-right: 16px;
 }
-
-.name_and_logo{
+.info_team_container{
+    height: 100%;
     display: flex;
     justify-content: center;
-    height: 200px;
-    
-}
-
-.team_name{
-    font-size: 25px;
-    padding-left: 50px;
-    
-}
-
-.info_team_container{
-    display: flex;
-
+    align-items: center;
 }
 
 .torneo_data{
-  
+    height: 100%;
     width: 50%;
-    padding-left: 50px;
-    font-size: 25px;
-    color: #f5f5f5;
+    padding-left: 32px;
 }
 .partidos_data{
-   
+    height: 100%;
     width: 50%;
+    padding-left: 32px;
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     text-align: center;
     font-size: 25px;
 }
 
 .info_and_logo{
+    margin-top: 8px;
     display: flex;
+    align-items: center;
 }
 .logo{
-    width: 50px;
-    height: 50px;
-    padding-left: 20px;
+    margin-left: 16px;
+    margin-top: 6px;
+    width: 5%;
+}
+
+span{
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 p{
+    margin-top: 8px;
+    font-size:1.4rem ;
     color: #f5f5f5;
 }

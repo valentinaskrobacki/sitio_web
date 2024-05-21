@@ -18,18 +18,25 @@ async function fetchGames() {
     }
 }
 
+//formateo de fecha
+function formatDate(date) {
+    const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+    return new Date(date).toLocaleDateString('es-ES', options);
+}
+
+
 function displayGames(games) {
     const gamesContainer = document.getElementById('games_container');
     let gamesHTML = '<h2 class="title">PARTIDOS</h2>';
+    console.log(games);
     games.forEach(game => {
         const gameHTML = `
             <div class = "team_info">
                 <div class="date_info">
-                    <h3 class="info">${game.date}</h3>
+                    <h3 class="info">${formatDate(game.date)}</h3>
                     <p class="info">Estado de juego: ${game.status.long}</p>
-                    <p class="info">Liga: ${game.name}</p>
+                    <p class="info">${game.league.name}</p>
                 </div>
-                
                 <div class ="content">
                     <div class="teams_VS">
                         <img src="${game.teams.home.logo}" alt="" class="team_logo">
@@ -37,13 +44,10 @@ function displayGames(games) {
                         <img src="${game.teams.away.logo}" alt="" class="team_logo">
                     </div>
                     <div class="data">
-                        <p>Puntos:</p>
                         <p>${game.teams.home.name}: ${game.scores.home.total}</p>
                         <p>${game.teams.away.name}: ${game.scores.away.total}</p>
                     </div>
                 </div>
-                
-                
             </div>
         `;
         gamesHTML += gameHTML;
