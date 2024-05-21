@@ -9,20 +9,11 @@ const headersAllTeams = {
 // Define la función toggleInfo en el ámbito global
 function toggleInfo(index) {
     const teamData = document.getElementById(`team_data_${index}`);
-    //agrego y saco clase para añadir transision
-    if(teamData.classList.contains("teams_data-off")){
-        teamData.classList.remove("teams_data-off")
-        teamData.classList.add("teams_data-on")
+    if (teamData.style.display === 'none' || teamData.style.display === '') {
+        teamData.style.display = 'block';
     } else {
-        teamData.classList.remove("teams_data-on")
-        teamData.classList.add("teams_data-off")
+        teamData.style.display = 'none';
     }
-
-    // if (teamData.style.display === 'none' || teamData.style.display === '') {
-    //     teamData.style.display = 'block';
-    // } else {
-    //     teamData.style.display = 'none';
-    // }
 }
 
 function displayAllteams(teams) {
@@ -38,11 +29,15 @@ function displayAllteams(teams) {
                     <p class="team_info">${team.league.season}</p>
                     <button class="boton_info" id="boton_info_${index}">+info</button>
                 </div>
-                <div class="teams_data-off" id="team_data_${index}" >
+                <div class="teams_data" id="team_data_${index}" style="display: none;">
+                    <div class="name_and_logo">
+                        <img src="${team.team.logo}" alt="" class="team_logo">
+                    </div>
+                    <p class="team_name">Nombre: ${team.team.name}</p>
                     <div class="info_team_container">
                         <div class="torneo_data">
                             <div class="info_and_logo">
-                                <p>Torneo en el que participa: <span> ${team.league.name} </span></p>
+                                <p>Torneo en el que participa: ${team.league.name}</p>
                                 <img src="${team.league.logo}" alt="" class="logo">
                             </div>
                             <p>Posicion: ${team.position}</p>
