@@ -18,6 +18,15 @@ async function fetchGames() {
     }
 }
 
+const formatDate = (date) => {
+    const fecha = new Date(date)
+    return `${fecha.getDate()}/${fecha.getMonth()}/${fecha.getFullYear()}`
+}
+const finishedGame = (data) => {
+    const finish = data.split(' ')
+    return finish[finish.length - 1]
+}
+
 function displayGames(games) {
     const gamesContainer = document.getElementById('games_container');
     let gamesHTML = '<h2 class="title">PARTIDOS</h2>';
@@ -25,11 +34,10 @@ function displayGames(games) {
         const gameHTML = `
             <div class = "team_info">
                 <div class="date_info">
-                    <h3 class="info">${game.date}</h3>
-                    <p class="info">Estado de juego: ${game.status.long}</p>
-                    <p class="info">Liga: ${game.name}</p>
+                    <h3 class="info">${formatDate(game.date)}</h3>
+                    <p class="info">${finishedGame(game.status.long)}</p>
+                    <p class="info">${game.league.name}</p>
                 </div>
-                
                 <div class ="content">
                     <div class="teams_VS">
                         <img src="${game.teams.home.logo}" alt="" class="team_logo">
@@ -37,9 +45,8 @@ function displayGames(games) {
                         <img src="${game.teams.away.logo}" alt="" class="team_logo">
                     </div>
                     <div class="data">
-                        <p>Puntos:</p>
-                        <p>${game.teams.home.name}: ${game.scores.home.total}</p>
-                        <p>${game.teams.away.name}: ${game.scores.away.total}</p>
+                        <p>${game.scores.home.total}</p>
+                        <p>${game.scores.away.total}</p>
                     </div>
                 </div>
                 
