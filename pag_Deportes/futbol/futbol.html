@@ -7,11 +7,32 @@
     <link rel="stylesheet" href="../css/basquet/basquet.css">
     <title>Document</title>
 </head>
-<body>
-    <Header>
-        
 
-    </Header>
+
+<body>
+    <div class="contenedor-header">
+        <header>
+            <h1>VICTORY <span class="txtoscuro">RUSH</span></h1>
+            <nav id="nav">
+                <a href="#inicio" onclick="seleccionar()">inicio</a>
+                <a href="#nosotros" onclick="seleccionar()">Nosotros</a>
+                <a href="#contacto" onclick="seleccionar()">Contacto</a>
+                <a href="#Registrarse" onclick="seleccionar()">Registrarse</a>
+                <a href="./pag_Deportes/basquet/basquet.html" onclick="seleccionar()">Basquet</a>
+                <a href="./pag_Deportes/futbol/futbol.html" onclick="seleccionar()">Futbol</a>
+            </nav>
+            <div class="redes">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+            <!-- Icono del menu responsive -->
+            <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>                
+        </header>
+    </div>
+
     <main class="container">
         <div class="teams_data_containner">
             <a href="./equipos.html" class="all_teams">
