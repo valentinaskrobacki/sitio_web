@@ -14,3 +14,35 @@ function seleccionar(){
     document.getElementById("nav").classList = "";
     menuVisible = false;
 }
+
+//CONTACTO
+
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll(".imagenes .imagen");
+    let currentImageIndex = 0;
+
+    function changeImage() {
+        images[currentImageIndex].classList.remove("imagen-activa");
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        images[currentImageIndex].classList.add("imagen-activa");
+    }
+
+    setInterval(changeImage, 3000); // Cambia la imagen cada 3 segundos
+});
+
+//MENSAJE EXITO
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    setTimeout(function() {
+        var successMessage = document.getElementById('mensaje-exito');
+        successMessage.style.display = 'block';
+
+        document.getElementById('contactForm').reset();
+
+        setTimeout(function() {
+            successMessage.style.display = 'none';
+        }, 4000);
+    }, 500); 
+});

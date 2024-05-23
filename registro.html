@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo.css">
+    <title>Iniciar Sesión - Victory Rush</title>
+</head>
+
+<body>
+
+     <!-- MENU -->
+     <div class="contenedor-header">
+        <header>
+            <h1>VICTORY <span class="txtoscuro">RUSH</span></h1>
+            <nav id="nav">
+                <a href="index.html#inicio" onclick="seleccionar()">inicio</a>
+                <a href="index.html#nosotros" onclick="seleccionar()">Nosotros</a>
+                <a href="index.html#contacto" onclick="seleccionar()">Contacto</a>
+                <a href="registro.html" onclick="seleccionar()">Iniciar Sesión</a>
+            </nav>
+            <div class="redes">
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+            <!-- Icono del menu responsive -->
+            <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>                
+        </header>
+    </div>
+    
+     <!-- INICIO DE SESIÓN - REGISTRO -->
+
+     <div class="formulario">
+        <h1>VICTORY <span>RUSH</span></h1>
+          <form method="post">
+            <div class="usuario">
+                    <input type="text" name="Usuario" required>
+                    <label>Usuario</label>
+            </div>
+           <div class="contrasena">
+                   <input type="password" name="contrasena" requierd>
+                   <label>Contraseña</label>
+           </div>
+                    <div class="recordar">¿Olvido su contraseña?</div>
+                    <input type="submit" value="Iniciar" id="inicio">
+                      <div class="registrarse">
+                       Quiero <a reft="#">registrarme</a>
+                      </div>
+           </form>
+       </div>
+
+       <!-- FOOTER -->
+
+    <footer>
+        <div class="info">
+            <p> © 2024 - VICTORY RUSH Todos los derechos reservados</p>
+            <div class="redes">
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-phone"></i>
+                    2664 - 456788
+                </a>
+                <a href="https://www.gmail.com" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                    contact@victoryrush.com.ar
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+
+</body>
+</html>
