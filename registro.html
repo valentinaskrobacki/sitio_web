@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilo.css">
     <title>Iniciar Sesión - Victory Rush</title>
 </head>
 
 <body>
 
-     <!-- MENU -->
-     <div class="contenedor-header">
+    <!-- MENU -->
+    <div class="contenedor-header">
         <header>
             <h1>VICTORY <span class="txtoscuro">RUSH</span></h1>
             <nav id="nav">
@@ -29,34 +32,34 @@
             <!-- Icono del menu responsive -->
             <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
                 <i class="fa-solid fa-bars"></i>
-            </div>                
+            </div>
         </header>
     </div>
-    
-     <!-- INICIO DE SESIÓN - REGISTRO -->
 
-     <div class="formulario">
+    <!-- INICIO DE SESIÓN - REGISTRO -->
+
+    <div class="formulario">
         <h1>VICTORY <span>RUSH</span></h1>
-          <form method="post">
+        <form id="loginForm">
             <div class="usuario">
-                    <input type="text" name="Usuario" required>
-                    <label>Usuario</label>
+                <input type="text" name="usuario" required>
+                <label>Usuario</label>
             </div>
-           <div class="contrasena">
-                   <input type="password" name="contrasena" requierd>
-                   <label>Contraseña</label>
-           </div>
-                    <div class="recordar">
-                        <a href="contrasena.html" id="olvidecontrasenaLink">¿Olvido su contraseña?</a>
-                    </div>
-                    <input type="submit" value="Iniciar" id="inicio">
-                      <div class="registrarse">
-                       Quiero <a href="registro2.html" id="registrarLink">registrarme</a>
-                      </div>
-           </form>
-       </div>
+            <div class="contrasena">
+                <input type="password" name="contrasena" required>
+                <label>Contraseña</label>
+            </div>
+            <div class="recordar">
+                <a href="contrasena.html" id="olvidecontrasenaLink">¿Olvido su contraseña?</a>
+            </div>
+            <input type="submit" value="Iniciar" id="inicio">
+            <div class="registrarse">
+                Quiero <a href="registro2.html" id="registrarLink">registrarme</a>
+            </div>
+        </form>
+    </div>
 
-       <!-- FOOTER -->
+    <!-- FOOTER -->
 
     <footer>
         <div class="info">
@@ -85,7 +88,18 @@
             </div>
         </div>
     </footer>
+
+    <!--Redirección a INICIO-->
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault(); 
+
+            window.location.href = 'index.html#inicio';
+        });
+    </script>
+
     <script src="app.js"></script>
 
 </body>
+
 </html>
