@@ -1,15 +1,15 @@
 let menuVisible = false;
 //Función que oculta o muestra el menu
-function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("nav").classList ="";
+function mostrarOcultarMenu() {
+    if (menuVisible) {
+        document.getElementById("nav").classList = "";
         menuVisible = false;
-    }else{
-        document.getElementById("nav").classList ="responsive";
+    } else {
+        document.getElementById("nav").classList = "responsive";
         menuVisible = true;
     }
 }
-function seleccionar(){
+function seleccionar() {
     //oculto el menu una vez que selecciono una opcion
     document.getElementById("nav").classList = "";
     menuVisible = false;
@@ -17,7 +17,7 @@ function seleccionar(){
 
 //CONTACTO
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const images = document.querySelectorAll(".imagenes .imagen");
     let currentImageIndex = 0;
 
@@ -30,19 +30,25 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(changeImage, 3000); // Cambia la imagen cada 3 segundos
 });
 
-//MENSAJE EXITO
+//MENSAJE EXITO (CONTACTO)
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
+document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    setTimeout(function() {
+    setTimeout(function () {
         var successMessage = document.getElementById('mensaje-exito');
         successMessage.style.display = 'block';
 
         document.getElementById('contactForm').reset();
 
-        setTimeout(function() {
+        setTimeout(function () {
             successMessage.style.display = 'none';
         }, 4000);
-    }, 500); 
+    }, 500);
 });
+
+
+
+
+
+
