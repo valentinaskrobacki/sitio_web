@@ -34,7 +34,7 @@ function toggleInfo(index) {
 function displayAllteams(teams, leagueInfo) {
     const teamsContainer = document.getElementById('teams_containner');
     let teamsHTML = '<h2 class="titulo">Equipos</h2>';
-
+    //----------------------------------MUESTRA FUTBOL-------------------------------------------
     if(url.includes('futbol')){
         console.log('teams', teams);
         teams.forEach((teamData, index) => {
@@ -74,6 +74,7 @@ function displayAllteams(teams, leagueInfo) {
             `;
             teamsHTML += teamHTML;
         });
+    //----------------------------------MUESTRA BASQUET-------------------------------------------
     } else if (url.includes('basquet')){
         teams.forEach((team, index) => {
             let teamHTML = `
