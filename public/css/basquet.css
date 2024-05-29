@@ -28,6 +28,14 @@ html {
     padding: 20px 0;
     color: #f5f5f5;
 }
+
+.contenedor-header header h1 {
+    font-size: 24px; /* Tamaño de fuente del título */
+    color: #f5f5f5;
+    margin: 0;
+    font-weight: 700;
+}
+
 .txtoscuro{
     color:#23232D;
 }
