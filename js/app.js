@@ -16,7 +16,6 @@ function seleccionar() {
     menuVisible = false;
 }
 
-<<<<<<< HEAD
 //CONTACTO
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -54,5 +53,3 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 
 
 
-=======
->>>>>>> franleal-patch-1
