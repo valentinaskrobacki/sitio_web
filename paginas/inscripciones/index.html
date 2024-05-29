@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/estilo.css">
+</head>
+<body>
+    <div class="contenedor-header">
+        <header>
+            <h1>VICTORY <span class="txtoscuro">RUSH</span></h1>
+            <nav id="nav">
+                <a href="/" onclick="seleccionar()">inicio</a>
+                <a href="#nosotros" onclick="seleccionar()">Nosotros</a>
+                <a href="#contacto" onclick="seleccionar()">Contacto</a>
+                <a href="" onclick="seleccionar()">Inscripciones</a>
+                <a href="registro.html" onclick="seleccionar()">Iniciar Sesión</a>
+                <a href="./pag_Deportes//basquet/basquet.html" onclick="seleccionar()">Basquet</a>
+                <a href="./pag_Deportes/futbol/futbol.html" onclick="seleccionar()">Futbol</a>
+
+            </nav>
+            <div class="redes">
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+            <!-- Icono del menu responsive -->
+            <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>                
+        </header>
+    </div>
+    <main class="container-form">
+        <h1 class="container-form__h1">Inscribite</h1>
+        <div id="slide-container" class="slider-container">
+            <div id="slide" class="slider">
+                <form class="container-form__form">
+                    <div class="container-form__form__div">
+                        <input class="container-form__form__div__input" type="text"></input>
+                        <label class="container-form__form__div__label">Nombre de equipo</label>
+                    </div>
+                    <div class="container-form__form__div">
+                        <input class="container-form__form__div__input" type="text"></input>
+                        <label class="container-form__form__div__label">Localidad</label>
+                    </div>
+                    <button id="next" class="container-form__form__submit">Siguiente</button>
+                </form>
+                <form class="container-form__form">
+                    <div class="container-form__form__div">
+                        <input class="container-form__form__div__input"></input>
+                        <label class="container-form__form__div__label">Jugador 1</label>
+                    </div>
+                    <div class="container-form__form__div">
+                        <input class="container-form__form__div__input"></input>
+                        <label class="container-form__form__div__label"> Jugador 2</label>
+                    </div>
+                    <div class="container-form__form__div">
+                        <input class="container-form__form__div__input"></input>
+                        <label class="container-form__form__div__label">Jugador 3</label>
+                    </div>
+                    <div class="container-form__form__div">
+                        <input class="container-form__form__div__input"></input>
+                        <label class="container-form__form__div__label">Jugador 4</label>
+                    </div>
+                    <div class="container-form__form__div">
+                        <input class="container-form__form__div__input"></input>
+                        <label class="container-form__form__div__label">Jugador 5</label>
+                    </div>
+                    <div class="container-form__form__div">
+                        <input class="container-form__form__div__input"></input>
+                        <label class="container-form__form__div__label" >Jugador 6</label>
+                    </div>
+                    <div class="container-form__form__div">
+                        <input class="container-form__form__div__input"></input>
+                        <label class="container-form__form__div__label">Jugador 7</label>
+                    </div>
+                    <div class="container-btns">
+                        <button id="prev" class="btn">Atras</button>
+                        <button class="btn">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="info">
+            <p> © 2024 - VICTORY RUSH Todos los derechos reservados</p>
+            <div class="redes">
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-phone"></i>
+                    2664 - 456788
+                </a>
+                <a href="https://www.gmail.com" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                    contact@victoryrush.com.ar
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="../app.js"></script>
+    <script src="/public/inscripciones.js"></script>
+</body>
+</html>
